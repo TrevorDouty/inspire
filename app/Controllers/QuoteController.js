@@ -4,7 +4,7 @@ import { ProxyState } from "../AppState.js"
 
 
 function _drawQuote() {
-  console.log(ProxyState.quote);
+  // console.log(ProxyState.quote);
   document.getElementById('quote').innerHTML = ProxyState.quote.QuoteTemplate
 }
 export default class QuoteController {
@@ -15,7 +15,7 @@ export default class QuoteController {
   }
   getQuote() {
     try {
-      console.log('Quote controller')
+      // console.log('Quote controller')
       quoteService.getQuote();
     } catch (error) {
       console.error(error)

@@ -9,7 +9,7 @@ let url = 'trevor/todos/'
 class TodoService {
   async getTodos() {
     let res = await api.get(url);
-    ProxyState.todos = res.data.data.map(t => new Todo(t))
+    ProxyState.todos = res.data.data
     //TODO Handle this response from the server
   }
 

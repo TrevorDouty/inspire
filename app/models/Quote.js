@@ -9,7 +9,7 @@ export default class Quote {
 
   get QuoteTemplate() {
     return /*html*/`
-    <h5>${this.body}</h5>
+    <p>${this.body}<p>
     <h6>${this.author}</h6>
     
     `

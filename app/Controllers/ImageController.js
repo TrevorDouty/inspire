@@ -15,7 +15,7 @@ export default class ImageController {
 
   getImage() {
     try {
-      console.log('image controller')
+      // console.log('image controller')
       imageService.getImage();
     } catch (error) {
       console.error(error)
