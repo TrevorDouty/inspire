@@ -6,6 +6,7 @@ import Todo from "../models/Todo.js"
 let url = 'trevor/todos/'
 
 
+
 class TodoService {
   async getTodos() {
     let res = await api.get(url);
@@ -23,22 +24,28 @@ class TodoService {
 
   async toggleTodoStatus(todoId) {
     let todo = await ProxyState.todos.find(todo => todo.id == todoId);
+    todo.completed = todo.completed ? false : true;
+    console.log(todo.completed)
 
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
 
     let res = await api.put(url + todoId, todo);
-
+    this.getTodos()
     //TODO how do you trigger this change
   }
 
-  async removeTodo(todoId) {
+  async removeTodo(id) {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, how do you update the state
+    let res = await api.delete(url + id)
+    // console.log(res.data.data)
+    this.getTodos()
   }
 }
+
 
 const todoService = new TodoService();
 export default todoService;

@@ -5,6 +5,13 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ .text-green{
+   color: green;
+ }
+ .text-red{
+   color: red;
+ }
 .weather{
   display: flex;
   flex-grow: 1;
